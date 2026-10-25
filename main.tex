@@ -1,0 +1,93 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{array}
+
+% Definizione palette colori (ispirata a Linux Mint)
+\definecolor{mintdark}{HTML}{2F5233}
+\definecolor{mintlight}{HTML}{87A96B}
+\definecolor{text}{HTML}{222222}
+
+\titleformat{\section}{\large\bfseries\color{mintdark}}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{14pt}{6pt}
+
+\begin{document}
+\color{text}
+\pagestyle{empty}
+
+% --- INTESTAZIONE CONTATTI (In alto) ---
+\noindent
+\textbf{E-mail:} \href{mailto:stefanoperis.github@gmail.com}{stefanoperis.github@gmail.com} \hfill 
+\textbf{GitHub:} \href{https://github.com/TechnoKnight77}{https://github.com/TechnoKnight77}
+
+\vspace{15pt}
+
+% --- BLOCCO TITOLO, AUTORE E DATA ---
+\begin{center}
+    {\LARGE \bfseries \color{mintdark} Guida ai Comandi da Terminale di Linux (sistemi basati su Debian)} \\[0.4cm]
+    {\large Stefano Peris} \\[0.2cm]
+    {\small Ultima modifica: \today}
+\end{center}
+
+\vspace{15pt}
+
+% --- NAVIGAZIONE ---
+\section*{Navigazione nei File e nelle Cartelle}
+\noindent
+\begin{tabular}{@{}p{5cm}p{12cm}@{}}
+\textbf{\texttt{pwd}} & Mostra la cartella corrente in cui ti trovi (Print Working Directory). \\
+\textbf{\texttt{ls}} & Elenca i file e le cartelle presenti nella directory corrente. \\
+\textbf{\texttt{ls -la}} & Elenca tutti i file, inclusi quelli nascosti, con dettagli su permessi e dimensioni. \\
+\textbf{\texttt{cd [cartella]}} & Cambia la cartella corrente ed entra in quella specificata. \\
+\textbf{\texttt{cd ..}} & Torna indietro di una cartella nella gerarchia del sistema. \\
+\textbf{\texttt{cd \textasciitilde}} & Torna istantaneamente alla tua cartella Home personale.
+\end{tabular}
+
+% --- GESTIONE FILE ---
+\section*{Gestione di File e Cartelle}
+\noindent
+\begin{tabular}{@{}p{5cm}p{12cm}@{}}
+\textbf{\texttt{mkdir [nome\_cartella]}} & Crea una nuova cartella con il nome specificato. \\
+\textbf{\texttt{touch [nome\_file]}} & Crea un file di testo vuoto o ne aggiorna la data di modifica. \\
+\textbf{\texttt{cp [origine] [destinazione]}} & Copia un file o una cartella da un percorso a un altro. \\
+\textbf{\texttt{mv [origine] [destinazione]}} & Sposta o rinomina un file o una cartella. \\
+\textbf{\texttt{rm [nome\_file]}} & Elimina definitivamente il file specificato. \\
+\textbf{\texttt{rm -rf [nome\_cartella]}} & Elimina forzatamente una cartella e tutto il suo contenuto (usare con cautela).
+\end{tabular}
+
+% --- GESTIONE PACCHETTI ---
+\section*{Gestione dei Pacchetti e Aggiornamenti (APT)}
+\noindent
+\begin{tabular}{@{}p{5cm}p{12cm}@{}}
+\textbf{\texttt{sudo apt update}} & Sincronizza l'indice dei pacchetti dai server per verificare gli aggiornamenti disponibili. \\
+\textbf{\texttt{sudo apt upgrade}} & Installa gli aggiornamenti disponibili per tutti i software del sistema. \\
+\textbf{\texttt{sudo apt install [pacchetto]}} & Scarica e installa un nuovo software dai repository ufficiali. \\
+\textbf{\texttt{sudo apt remove [pacchetto]}} & Rimuove un software installato mantenendo i file di configurazione. \\
+\textbf{\texttt{sudo apt autoremove}} & Rimuove automaticamente i pacchetti e le dipendenze non più necessari.
+\end{tabular}
+
+% --- INFORMAZIONI DI SISTEMA ---
+\section*{Informazioni di Sistema e Monitoraggio}
+\noindent
+\begin{tabular}{@{}p{5cm}p{12cm}@{}}
+\textbf{\texttt{df -h}} & Mostra lo spazio disponibile e utilizzato sui dischi in formato leggibile (GB, MB). \\
+\textbf{\texttt{free -h}} & Mostra l'utilizzo della memoria RAM e della partizione di Swap del computer. \\
+\textbf{\texttt{top}} & Mostra in tempo reale i processi attivi e le risorse hardware utilizzate. \\
+\textbf{\texttt{uname -a}} & Stampa le informazioni dettagliate sul kernel Linux e sul sistema in uso.
+\end{tabular}
+
+% --- SCORCIATOIE ---
+\section*{Scorciatoie Essenziali da Tastiera}
+\noindent
+\begin{tabular}{@{}p{5cm}p{12cm}@{}}
+\textbf{\texttt{Tab}} & Autocompleta automaticamente i nomi dei comandi, dei file o delle cartelle. \\
+\textbf{\texttt{Ctrl + C}} & Interrompe e blocca immediatamente il comando o il processo in esecuzione. \\
+\textbf{\texttt{Ctrl + ALT + T}} & Scorciatoia di sistema su Linux Mint per aprire istantaneamente il Terminale. \\
+\textbf{\texttt{clear}} & Pulisce interamente la schermata del terminale da tutto il testo precedente.
+\end{tabular}
+
+\end{document}
